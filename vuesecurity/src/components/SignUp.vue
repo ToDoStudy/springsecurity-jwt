@@ -1,6 +1,7 @@
 <template>
   <div class="hello">
     <input type="email" name="" id="" placeholder="Email" v-model="email" />
+    <br />
     <input
       type="password"
       name=""
@@ -8,6 +9,13 @@
       placeholder="password"
       v-model="password"
     />
+    <br />
+    <select v-model="auth">
+      <option disabled value="">메뉴를 선택해 주세요</option>
+      <option value="0">사용자</option>
+      <option value="1">관리자</option>
+    </select>
+    <br />
     <input type="submit" value="submit" @click="loginSubmit" />
   </div>
 </template>
@@ -21,6 +29,7 @@ export default {
     return {
       email: null,
       password: null,
+      auth: null,
     };
   },
   methods: {
@@ -28,11 +37,13 @@ export default {
       let saveData = {
         email: this.email,
         password: this.password,
-        auth: 0,
+        auth: this.auth,
       };
 
+      console.log("value : " + this.auth);
+
       axios.post("/cmbapart/user/signup", saveData).then((response) => {
-        console.log("email : " + response.data.email);
+        alert("회원가입 성공 : " + response.data.email);
       });
     },
   },

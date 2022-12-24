@@ -1,8 +1,8 @@
 <template>
   <div id="app">
     <nav>
-      <router-link to="/">회원가입</router-link> |
-      <router-link to="/about">로그인</router-link>
+      <router-link to="/login">로그인</router-link> |
+      <router-link to="/signup">회원가입</router-link>
     </nav>
     <router-view />
   </div>
