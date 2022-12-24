@@ -1,6 +1,10 @@
+> 로그인할 때 어떤 방법으로 access token, refresh token을 처리하는 걸까 라는 생각에 구글링하다 알게되어 공부할 겸 만들게 되었다.
+
+&nbsp;
+
 # 🖥 실행 영상
 
-
+https://user-images.githubusercontent.com/72541544/209450029-ce3fb926-6775-438d-8d87-1332cdf8de56.mov
 
 
 &nbsp;
@@ -8,7 +12,7 @@
 
 # 📌 1. 회원가입, 로그인
 
-[1. 회원가입, 로그인]();
+[1. 회원가입, 로그인](https://github.com/ToDoStudy/springsecurity-jwt/blob/main/%ED%9A%8C%EC%9B%90%EA%B0%80%EC%9E%85%2C%20%EB%A1%9C%EA%B7%B8%EC%9D%B8.md);
 
 
 
@@ -17,6 +21,8 @@
 
 # 📌 2. JWT와 Security 설정
 
-[2. JWT 와 Security 설정]();
+[2. JWT 와 Security 설정](https://github.com/ToDoStudy/springsecurity-jwt/blob/main/Jwt%2C%20Spring%20Security%20%EA%B4%80%EB%A0%A8%20%EC%84%A4%EC%A0%95.md);
 
 
+
+&nbsp;
