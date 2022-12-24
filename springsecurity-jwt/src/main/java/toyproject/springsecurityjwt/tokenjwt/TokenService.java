@@ -35,6 +35,8 @@ public class TokenService {
 
         // 비밀번호 체크
         // authenticate 메서드가 실행이 될 때 CustomUserDetailsService 에서 만들었던 loadUserByUsername 메서드가 실행됨
+        // loadUserByUsername
+        // Authentication : 인증
         Authentication authentication = authenticationManagerBuilder.getObject().authenticate(authenticationToken);
 
         // 인증 정보를 통해 JWT 토큰을 생성한다.

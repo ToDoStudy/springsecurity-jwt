@@ -10,6 +10,8 @@ import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
+import toyproject.springsecurityjwt.user.web.dto.UserResponseDto;
+import toyproject.springsecurityjwt.user.web.dto.UserSignupRequestDto;
 
 @Slf4j
 @RestController
@@ -23,9 +25,9 @@ public class UserRestController {
     @Autowired
     private TokenService userTokenRelatedService;
 
-    @GetMapping("/signup")
-    public ResponseEntity<?> signup(@RequestBody UserRequestDto userRequestDto){
-        return ResponseEntity.ok(userService.signup(userRequestDto));
+    @PostMapping("/signup")
+    public ResponseEntity<UserResponseDto> signup(@RequestBody UserSignupRequestDto userSignupRequestDto){
+        return ResponseEntity.ok(userService.signup(userSignupRequestDto));
     }
 
 

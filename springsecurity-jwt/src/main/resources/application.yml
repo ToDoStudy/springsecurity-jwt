@@ -1,6 +1,7 @@
 server:
   servlet:
     context-path: /cmbapart
+  port: 9999
 
 spring:
   jwt:
@@ -9,8 +10,8 @@ spring:
 
   datasource:
     url: jdbc:mysql://localhost:3306/springsecurity_schema?serverTimezone=UTC&useUniCode=yes&characterEncoding=UTF-8
-    username: userid
-    password: userpwd
+    username: toyuser
+    password: KChang&60
 
   jpa:
     hibernate:

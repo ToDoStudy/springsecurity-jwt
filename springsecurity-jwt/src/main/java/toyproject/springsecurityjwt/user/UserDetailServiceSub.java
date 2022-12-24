@@ -20,6 +20,9 @@ public class UserDetailServiceSub implements UserDetailsService {
     // username -> email
     @Override
     public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
+        // findByEmail의 username을 통해 현재 사용자의 정보를 발급 받고
+        // createUserDetails을 통해 UserDetail 객체로 만들어서 리턴
+        // 없으면 예외처리
         return userRepository.findByEmail(username)
                 .map(this::createUserDetails)
                 .orElseThrow(() -> new UsernameNotFoundException(username + " 는 db에서 찾을 수 없습니다."));

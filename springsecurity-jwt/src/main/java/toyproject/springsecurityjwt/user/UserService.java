@@ -7,6 +7,7 @@ import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 import toyproject.springsecurityjwt.user.web.dto.UserRequestDto;
 import toyproject.springsecurityjwt.user.web.dto.UserResponseDto;
+import toyproject.springsecurityjwt.user.web.dto.UserSignupRequestDto;
 
 
 @Transactional(readOnly = true) // 오직 읽기만 가능하다.
@@ -20,13 +21,13 @@ public class UserService{
 
     // 회원가입
     @Transactional
-    public UserResponseDto signup(UserRequestDto userRequestDto){
-        if(userRepository.existsByEmail(userRequestDto.getEmail())){
+    public UserResponseDto signup(UserSignupRequestDto userSignupRequestDto){
+        if(userRepository.existsByEmail(userSignupRequestDto.getEmail())){
             throw new RuntimeException("이미 가입되어 있는 유저입니다.");
         }
 
         // 회원가입시키기 위해 비밀번호를 암호로 바꿔서 저장한다.
-        User user = userRequestDto.toUser(passwordEncoder);
+        User user = userSignupRequestDto.toUser(passwordEncoder);
         return UserResponseDto.of(userRepository.save(user));
     }
 
