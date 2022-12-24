@@ -22,7 +22,7 @@
 
 # 📌 1. 회원가입, 로그인
 
-[1. 회원가입, 로그인](https://principled-ground-ee4.notion.site/3-7488af682a5f473ebba42ac2ec88e3e0);
+[1. 회원가입, 로그인](https://principled-ground-ee4.notion.site/3-7488af682a5f473ebba42ac2ec88e3e0)
 
 
 
@@ -31,7 +31,7 @@
 
 # 📌 2. JWT와 Security 설정
 
-[2. JWT 와 Security 설정](https://www.notion.so/4-JWT-Security-a26f7685be6f45b5add3f861682899f1);
+[2. JWT 와 Security 설정](https://www.notion.so/4-JWT-Security-a26f7685be6f45b5add3f861682899f1)
 
 
 
